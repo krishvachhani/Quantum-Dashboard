@@ -37,8 +37,21 @@
           <div class="notification account-notification">T</div>
         </div>
         <div class="navbar__menu__items small-screen">
-          <img src="./Assets/icons/hamburger-menu.svg" alt="" />
+          <img
+            id="hamburger__icon"
+            onclick="toggle()"
+            src="./Assets/icons/hamburger-menu.svg"
+            alt=""
+          />
         </div>
+      </div>
+
+      <div class="dropdown__container">
+        <div class="navbar--menu--items__mobile">DASHBOARD</div>
+        <div class="navbar--menu--items__mobile">CONTENT</div>
+        <div class="navbar--menu--items__mobile">USERS</div>
+        <div class="navbar--menu--items__mobile">REPORTS</div>
+        <div class="navbar--menu--items__mobile">ADMIN</div>
       </div>
     </nav>
     <div class="hero__container">
@@ -71,216 +84,30 @@
 
       <hr />
 
-      <div class="course__cards">
-        <div class="cards card__1">
-          <div class="card__data">
-            <img src="./Assets/images/imageMask-2.svg" alt="" />
-            <div class="card__texts">
-              <div class="card__heading">
-                <p>Acceleration</p>
-                <img src="./Assets/icons/favourite.svg" alt="" />
-              </div>
-              <br />
-              <div class="subject">
-                <p>Physics</p>
-                <div style="border: 1px solid rgba(0, 0, 0, 0.12)"></div>
-                <p>Grade 7 <span style="color: #1f7a54">+2</span></p>
-              </div>
-              <br />
-              <div class="topics">
-                <b>4</b> Units <b>18</b> Lessons <b>24</b> Topics
-              </div>
-              <br />
-              <form class="card__droupdown" action="">
-                <select name="course__name" id="">
-                  <option value="Course_name">Mr. Frank's Class B</option>
-                </select>
-              </form>
-              <br />
-              <div class="subject">
-                <p>50 Students</p>
-                <div style="border: 1px solid rgba(0, 0, 0, 0.12)"></div>
-                <p>21-Jan-2020 - 21-Aug-2020</p>
-              </div>
-            </div>
-          </div>
-          <br />
-          <hr />
-          <br />
-          <div class="card__icons">
-            <img src="./Assets/icons/preview.svg" alt="" />
-            <img src="./Assets/icons/manage_course.svg" alt="" />
-            <img src="./Assets/icons/grade_submissions.svg" alt="" />
-            <img src="./Assets/icons/reports.svg" alt="" />
-          </div>
-        </div>
-        <div class="cards card__2">
-          <div class="card__data">
-            <img src="./Assets/images/imageMask-1.svg" alt="" />
-            <div class="card__texts">
-              <div class="card__heading">
-                <p>Displacement, Velocity and Speed</p>
-                <img src="./Assets/icons/favourite.svg" alt="" />
-              </div>
-              <br />
-              <div class="subject">
-                <p>Physics</p>
-                <div style="border: 1px solid rgba(0, 0, 0, 0.12)"></div>
-                <p>Grade 6 <span style="color: #1f7a54">+3</span></p>
-              </div>
-              <br />
-              <div class="topics">
-                <b>2</b> Units <b>15</b> Lessons <b>20</b> Topics
-              </div>
-              <br />
-              <form class="card__droupdown" action="">
-                <select
-                  name="course__name"
-                  style="color: rgba(0, 0, 0, 0.4)"
-                  id=""
-                >
-                  <option value="Course_name">No Classes</option>
-                </select>
-              </form>
-              <br />
-            </div>
-          </div>
-          <br />
-          <hr />
-          <br />
-          <div class="card__icons">
-            <img src="./Assets/icons/preview.svg" alt="" />
-            <img
-              style="opacity: 0.4"
-              src="./Assets/icons/manage_course.svg"
-              alt=""
-            />
-            <img
-              style="opacity: 0.4"
-              src="./Assets/icons/grade_submissions.svg"
-              alt=""
-            />
-            <img src="./Assets/icons/reports.svg" alt="" />
-          </div>
-        </div>
-        <div class="cards card__3">
-          <div class="card__data">
-            <img src="./Assets/images/imageMask-3.svg" alt="" />
-            <div class="card__texts">
-              <div class="card__heading">
-                <p>
-                  Introduction to Biology: Micro organisms and how they affec...
-                </p>
-                <img src="./Assets/icons/favourite.svg" alt="" />
-              </div>
-              <br />
-              <div class="subject">
-                <p>Biology</p>
-                <div style="border: 1px solid rgba(0, 0, 0, 0.12)"></div>
-                <p>Grade 4 <span style="color: #1f7a54">+1</span></p>
-              </div>
-              <br />
-              <div class="topics">
-                <b>5</b> Units <b>16</b> Lessons <b>22</b> Topics
-              </div>
-              <br />
-              <form class="card__droupdown" action="">
-                <select name="course__name" id="">
-                  <option value="Course_name">All Classes</option>
-                </select>
-              </form>
-              <br />
-              <div class="subject">
-                <p>300 Students</p>
-              </div>
-            </div>
-          </div>
-          <br />
-          <hr />
-          <br />
-          <div class="card__icons">
-            <img src="./Assets/icons/preview.svg" alt="" />
-            <img
-              style="opacity: 0.4"
-              src="./Assets/icons/manage_course.svg"
-              alt=""
-            />
-            <img
-              style="opacity: 0.4"
-              src="./Assets/icons/grade_submissions.svg"
-              alt=""
-            />
-            <img src="./Assets/icons/reports.svg" alt="" />
-          </div>
-        </div>
-        <div class="cards card__4">
-          <div class="expired__txt">EXPIRED</div>
-          <div class="card__data">
-            <img src="./Assets/images/imageMask.svg" alt="" />
-            <div class="card__texts">
-              <div class="card__heading">
-                <p>Introduction to High School Mathematics</p>
-                <img
-                  style="
-                    filter: brightness(0) saturate(100%) invert(100%) sepia(2%)
-                      saturate(986%) hue-rotate(231deg) brightness(117%)
-                      contrast(87%);
-                  "
-                  src="./Assets/icons/favourite.svg"
-                  alt=""
-                />
-              </div>
-              <br />
-              <div class="topics">
-                <b>4</b> Units <b>18</b> Lessons <b>24</b> Topics
-              </div>
-              <br />
-              <form class="card__droupdown" action="">
-                <select name="course__name" id="">
-                  <option value="Course_name">Mr. Frank's Class B</option>
-                </select>
-              </form>
-              <br />
-              <div class="subject">
-                <p>44 Students</p>
-                <div style="border: 1px solid rgba(0, 0, 0, 0.12)"></div>
-                <p>14-Oct-2019 - 20-Oct-2020</p>
-              </div>
-            </div>
-          </div>
-          <br />
-          <hr />
-          <br />
-          <div class="card__icons">
-            <img src="./Assets/icons/preview.svg" alt="" />
-            <img src="./Assets/icons/manage_course.svg" alt="" />
-            <img src="./Assets/icons/grade_submissions.svg" alt="" />
-            <img src="./Assets/icons/reports.svg" alt="" />
-          </div>
-        </div>
-      </div>
+      <div class="course__cards"></div>
     </div>
-    <div class="mainfooter">
-      <div class="bottom__div">
-        <p style="margin-right: 8px">About</p>
+
+    <div class="bottom__div">
+      <p style="margin-right: 8px">About</p>
+      <p style="border-left: 1px solid #0000001f; padding-left: 10px">
+        Contact Us
+      </p>
+    </div>
+    <div class="footer">
+      <div class="footer_div">
+        <img
+          class="bottom_footer_image"
+          src="./assets/icons/footer_logo.svg"
+          alt=""
+        />
         <p style="border-left: 1px solid #0000001f; padding-left: 10px">
-          Contact Us
+          Copyright © 2020-2021
         </p>
-      </div>
-      <div class="footer">
-        <div class="footer_div">
-          <img
-            class="bottom_footer_image"
-            src="./assets/icons/footer_logo.svg"
-            alt=""
-          />
-          <p style="border-left: 1px solid #0000001f; padding-left: 10px">
-            Copyright © 2020-2021
-          </p>
-          <p class="footer_text"><b>Zeus Systems Pvt. Ltd.</b></p>
-          <p class="footer_text">All rights reserved.</p>
-        </div>
+        <p class="footer_text"><b>Zeus Systems Pvt. Ltd.</b></p>
+        <p class="footer_text">All rights reserved.</p>
       </div>
     </div>
+
+    <script type="module" src="./index.js"></script>
   </body>
 </html>

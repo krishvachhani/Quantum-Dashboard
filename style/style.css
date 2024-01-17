@@ -13,8 +13,6 @@ html {
 body {
   background-color: #eeeeee;
   position: relative;
-  height: 100vh;
-  position: relative;
 }
 
 .header-div {
@@ -22,8 +20,8 @@ body {
   height: 5.6rem;
   display: flex;
   justify-content: space-between;
+  position: relative;
 }
-
 .header-div .navbar__menu {
   display: flex;
   justify-content: space-between;
@@ -31,26 +29,38 @@ body {
   font-size: 1.4rem;
   color: #3fd28b;
   position: relative;
+  margin-right: 2.4rem;
 }
-
 .header-div .navbar__menu__items {
   margin-left: 3.2rem;
 }
-
 .header-div .navbar__menu .active {
   color: #fff;
   border-bottom: 0.4rem solid #fff;
   padding: 1.75rem 0;
 }
-
 .header-div .navbar__menu:last-child {
   margin-right: 2.4rem;
+}
+.header-div .dropdown__container {
+  display: none;
+  position: absolute;
+  background-color: white;
+  right: 1.6rem;
+  top: 5.6rem;
+  z-index: 1000;
+  box-shadow: 0px 13px 20px rgba(0, 0, 0, 0.2392156863);
+  width: 28rem;
+}
+.header-div .dropdown__container .navbar--menu--items__mobile {
+  font-size: 1.4rem;
+  color: #1f7a54;
+  margin: 1.5rem 1.6rem;
 }
 
 .position {
   position: relative;
 }
-
 .position .account {
   width: 3.2rem;
   height: 3.2rem;
@@ -58,7 +68,6 @@ body {
   border-radius: 50%;
   overflow: hidden;
 }
-
 .position .notification {
   position: absolute;
   color: #fff;
@@ -69,7 +78,6 @@ body {
   top: -0.8rem;
   right: -0.5rem;
 }
-
 .position .account-notification {
   color: black;
   background-color: #fff;
@@ -101,7 +109,6 @@ nav::before {
 .hero__container {
   margin: 2.4rem;
 }
-
 .hero__container .courses__and__classes {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -111,14 +118,12 @@ nav::before {
   position: relative;
   margin-bottom: 2.6rem;
 }
-
 .hero__container .courses__and__classes #border__bottom {
   border-bottom: 4px solid #000;
   width: 50%;
   position: absolute;
   bottom: 0;
 }
-
 .hero__container .courses,
 .hero__container .classes {
   display: flex;
@@ -126,13 +131,11 @@ nav::before {
   justify-content: center;
   font-size: 1.6rem;
 }
-
 .hero__container .courses .number__span,
 .hero__container .classes .number__span {
   font-weight: 700;
   font-size: 2.4rem;
 }
-
 .hero__container .courses__icon,
 .hero__container .classes__icon {
   height: 3.2rem;
@@ -144,12 +147,10 @@ nav::before {
   grid-template-rows: 1fr;
   margin-bottom: 1.8rem;
 }
-
 .filters .filter__text {
   justify-self: start;
   font-size: 1.2rem;
 }
-
 .filters .filter__dropdown {
   justify-self: end;
   font-size: 1.2rem;
@@ -192,49 +193,40 @@ hr {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   -moz-column-gap: 2.4rem;
-  column-gap: 2.4rem;
+       column-gap: 2.4rem;
   row-gap: 2.5rem;
 }
-
 .course__cards .cards {
   padding: 2.4rem;
   background-color: #fff;
 }
-
 .course__cards .cards .card__data {
   display: flex;
 }
-
 .course__cards .cards .card__data .card__texts {
   margin-left: 1.6rem;
   width: 100%;
 }
-
 .course__cards .cards .card__data .card__texts .card__heading {
   font-size: 1.6rem;
   display: flex;
   justify-content: space-between;
 }
-
 .course__cards .cards .card__data .card__texts .subject {
   display: flex;
   justify-content: start;
   font-size: 1.2rem;
   color: #666666;
 }
-
 .course__cards .cards .card__data .card__texts .subject p:first-child {
   margin-right: 0.8rem;
 }
-
 .course__cards .cards .card__data .card__texts .subject p:last-child {
   margin-left: 0.8rem;
 }
-
 .course__cards .cards .card__data .card__texts .topics {
   font-size: 1.2rem;
 }
-
 .course__cards .cards .card__data .card__texts .card__droupdown > select {
   border: none;
   outline: none;
@@ -244,7 +236,6 @@ hr {
   border-bottom: 0.1rem solid rgba(0, 0, 0, 0.12);
   width: 100%;
 }
-
 .course__cards .cards .card__icons {
   display: flex;
   justify-content: space-around;
@@ -254,7 +245,6 @@ hr {
 .card__4 {
   position: relative;
 }
-
 .card__4 .expired__txt {
   position: absolute;
   color: #d80000;
@@ -265,12 +255,6 @@ hr {
   font-weight: 700;
   top: 0;
   left: 0;
-}
-
-.mainfooter {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
 }
 
 .bottom__div {
@@ -327,4 +311,4 @@ hr {
   .header-div .navbar__menu:last-child {
     margin-right: 1.2rem;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
