@@ -1,113 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quantum Dashboard</title>
-    <link rel="stylesheet" href="./style/style.css" />
-  </head>
-  <body>
+    <link rel="stylesheet" href="./style/style.css">
+    <script src="https://kit.fontawesome.com/854a9ccbaa.js" crossorigin="anonymous"></script>
+</head>
+<body>
     <nav class="header-div">
-      <img id="logo-header" src="./Assets/icons/header_logo.svg" alt="" />
-      <div class="navbar__menu">
-        <div class="navbar__menu__items big-screen active">DASHBOARD</div>
-        <!-- <div id="active__border__bottom"></div> -->
-        <div class="navbar__menu__items big-screen">CONTENT</div>
-        <div class="navbar__menu__items big-screen">USERS</div>
-        <div class="navbar__menu__items big-screen">REPORTS</div>
-        <div class="navbar__menu__items big-screen">ADMIN</div>
-        <div class="position navbar__menu__items">
-          <img
-            class="icons"
-            src="assets/quantum screen assets/icons/alerts.svg"
-            alt="alerts"
-          />
-          <div class="notification">2</div>
+        <img id="logo-header" src="./Assets/icons/header_logo.svg" alt="">
+        <div class="navbar__menu">
+            <div class="navbar__menu__items big-screen activeDashboard">DASHBOARD</div>
+            <!-- <div id="active__border__bottom"></div> -->
+            <div class="navbar__menu__items big-screen">CONTENT</div>
+            <div class="navbar__menu__items big-screen">USERS</div>
+            <div class="navbar__menu__items big-screen">REPORTS</div>
+            <div class="navbar__menu__items big-screen">ADMIN</div>
+            <div class="position navbar__menu__items alert">
+                <img class="icons alert__icon" src="assets/quantum screen assets/icons/alerts.svg" alt="alerts"/>
+                <div class="notification">2</div>
+                <div class="alert__menu">
+                    <div class="alert__button">
+                        <a href="">SHOW ALL</a>
+                    </div>
+                </div>
+            </div>
+            <div class="position announcement navbar__menu__items">
+                <img id="announcement__icon__id" class="icons announcement__icon" src="assets/quantum screen assets/icons/announcements.svg" alt="notifications"/>
+                <div class="notification">1</div>
+                <div class="announcement__menu">
+                    <div class="announcement__button">
+                        <a href="">SHOW ALL</a>
+                        <div style="border: 1px solid rgba(0,0,0,0.12);"></div>
+                        <a href="">CREATE NEW</a>
+                    </div>
+                </div>
+            </div>
+            <div class="position navbar__menu__items last__div">
+                <img class="icons account" src="assets/mosh.jpg" alt="accounts"/>
+                <div class="notification account-notification">T</div>
+            </div>
+            <div class="navbar__menu__items small-screen last__div">
+                <img id="hamburger__icon" src="./Assets/icons/hamburger-menu.svg" alt="">
+            </div>
         </div>
-        <div class="position navbar__menu__items">
-          <img
-            class="icons"
-            src="assets/quantum screen assets/icons/announcements.svg"
-            alt="notifications"
-          />
-          <div class="notification">1</div>
-        </div>
-        <div class="position navbar__menu__items">
-          <img class="icons account" src="assets/mosh.jpg" alt="accounts" />
-          <div class="notification account-notification">T</div>
-        </div>
-        <div class="navbar__menu__items small-screen">
-          <img
-            id="hamburger__icon"
-            onclick="toggle()"
-            src="./Assets/icons/hamburger-menu.svg"
-            alt=""
-          />
-        </div>
-      </div>
 
-      <div class="dropdown__container">
-        <div class="navbar--menu--items__mobile">DASHBOARD</div>
-        <div class="navbar--menu--items__mobile">CONTENT</div>
-        <div class="navbar--menu--items__mobile">USERS</div>
-        <div class="navbar--menu--items__mobile">REPORTS</div>
-        <div class="navbar--menu--items__mobile">ADMIN</div>
-      </div>
+        <div class="dropdown__container">
+            <div class="navbar--menu--items__mobile">DASHBOARD</div>
+            <div id="content" class="navbar--menu--items__mobile">
+                <div class="submenu">
+                    <p>CONTENT</p>
+                    <i class="fa-solid fa-caret-down rotate__icon"></i>
+                </div>
+                <div class="submenu__dropdown">COURSE CATALOG</div>
+            </div>
+            <div id="users" class="navbar--menu--items__mobile">
+                <div class="submenu">
+                    <p>USERS</p>
+                    <i class="fa-solid fa-caret-down rotate__icon"></i>
+                </div>
+                <div class="submenu__dropdown">COURSE CATALOG</div>
+            </div>
+            <div id="reports" class="navbar--menu--items__mobile">
+                <div class="submenu">
+                    <p>REPORTS</p>
+                    <i class="fa-solid fa-caret-down rotate__icon"></i>
+                </div>
+                <div class="submenu__dropdown">COURSE CATALOG</div>
+            </div>
+            <div id="admin" class="navbar--menu--items__mobile">
+                <div class="submenu">
+                    <p>ADMIN</p>
+                    <i class="fa-solid fa-caret-down rotate__icon"></i>
+                </div>
+                <div class="submenu__dropdown">COURSE CATALOG</div>
+            </div>
+        </div>
     </nav>
     <div class="hero__container">
-      <div class="courses__and__classes">
-        <div class="courses">
-          <img class="courses__icon" src="./Assets/icons/courses.svg" alt="" />
-          <span class="number__span">4</span> &nbsp; Courses
-        </div>
-        <div class="classes">
-          <img class="classes__icon" src="./Assets/icons/classes.svg" alt="" />
-          <span class="number__span">4</span> &nbsp; Classes
-        </div>
-        <div id="border__bottom"></div>
-      </div>
 
-      <div class="filters">
-        <div class="filter__text">Showing 4 of 4 courses</div>
-        <div class="filter__dropdown">
-          <form class="form__class" action="">
-            <label for="filter" class="dropdown__label" id="State"
-              >Sort By: &nbsp;</label
-            >
-            <select name="filter" id="">
-              <option value="Course_name">Course Name</option>
-            </select>
-            <img src="./Assets/icons/sort.svg" alt="" />
-          </form>
+        <div class="courses__and__classes">
+            <div class="courses">
+                <img class="courses__icon" src="./Assets/icons/courses.svg" alt="">
+                <span class="number__span">4</span> &nbsp; Courses
+            </div>
+            <div class="classes">
+                <img class="classes__icon"src="./Assets/icons/classes.svg" alt="">
+                <span class="number__span">4</span> &nbsp; Classes
+            </div>
+            <div id="border__bottom"></div>
         </div>
-      </div>
+        
+        <div class="filters">
+            <div class="filter__text">
+                Showing 4 of 4 courses
+            </div>
+            <div class="filter__dropdown">
+                <form class="form__class"action="">
+                    <label for="filter" class="dropdown__label" id="State">Sort By: &nbsp;</label>
+                    <select name="filter" id="">
+                        <option value="Course_name">Course Name</option>
+                    </select>
+                    <img src="./Assets/icons/sort.svg" alt="">
+                </form>
+            </div>
+        </div>
 
-      <hr />
+        <hr>
 
-      <div class="course__cards"></div>
+        <div class="course__cards"> </div>
     </div>
 
     <div class="bottom__div">
-      <p style="margin-right: 8px">About</p>
-      <p style="border-left: 1px solid #0000001f; padding-left: 10px">
-        Contact Us
-      </p>
+        <p style="margin-right: 8px">About</p>
+        <p style="border-left: 1px solid #0000001f; padding-left: 10px">
+          Contact Us
+        </p>
     </div>
     <div class="footer">
-      <div class="footer_div">
-        <img
-          class="bottom_footer_image"
-          src="./assets/icons/footer_logo.svg"
-          alt=""
-        />
-        <p style="border-left: 1px solid #0000001f; padding-left: 10px">
-          Copyright © 2020-2021
-        </p>
-        <p class="footer_text"><b>Zeus Systems Pvt. Ltd.</b></p>
-        <p class="footer_text">All rights reserved.</p>
-      </div>
+        <div class="footer_div">
+          <img
+            class="bottom_footer_image"
+            src="./assets/icons/footer_logo.svg"
+            alt=""
+          />
+          <p style="border-left: 1px solid #0000001f; padding-left: 10px">
+            Copyright © 2020-2021
+          </p>
+          <p class="footer_text"><b>Zeus Systems Pvt. Ltd.</b></p>
+          <p class="footer_text">All rights reserved.</p>
+        </div>
     </div>
 
     <script type="module" src="./index.js"></script>
-  </body>
+</body>
 </html>

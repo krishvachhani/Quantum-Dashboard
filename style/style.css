@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  background-color: #eeeeee;
+  background-color: #EEEEEE;
   position: relative;
 }
 
@@ -27,17 +27,135 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 1.4rem;
-  color: #3fd28b;
+  color: #3FD28B;
   position: relative;
   margin-right: 2.4rem;
 }
 .header-div .navbar__menu__items {
   margin-left: 3.2rem;
 }
-.header-div .navbar__menu .active {
+.header-div .navbar__menu__items .icons {
+  cursor: pointer;
+}
+.header-div .navbar__menu .activeDashboard {
   color: #fff;
   border-bottom: 0.4rem solid #fff;
   padding: 1.75rem 0;
+}
+.header-div .navbar__menu .announcement__menu {
+  display: none;
+  position: absolute;
+  width: 31.5rem;
+  height: 58.2rem;
+  background-color: #fff;
+  overflow-y: scroll;
+  color: #000;
+  top: 4rem;
+  left: 0;
+  z-index: 1000;
+  transform: translateX(-80%);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2392156863);
+}
+.header-div .navbar__menu .announcement__menu .announcement__card {
+  padding: 1.6rem;
+}
+.header-div .navbar__menu .announcement__menu .announcement__card .sender {
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8rem;
+}
+.header-div .navbar__menu .announcement__menu .announcement__card .sender img {
+  width: 1.5rem;
+}
+.header-div .navbar__menu .announcement__menu .announcement__card .message {
+  font-size: 1.4rem;
+  margin-bottom: 0.8rem;
+}
+.header-div .navbar__menu .announcement__menu .announcement__card .attachments__date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #6E6E6E;
+}
+.header-div .navbar__menu .announcement__menu .announcement__card .course {
+  font-size: 1.2rem;
+  color: #6E6E6E;
+  margin-bottom: 0.8rem;
+}
+.header-div .navbar__menu .announcement__menu .announcement__button {
+  display: flex;
+  padding: 0.9rem;
+  justify-content: space-around;
+}
+.header-div .navbar__menu .announcement__menu .announcement__button a {
+  margin: 0.6rem;
+  text-decoration: none;
+  color: #1F7A54;
+}
+.header-div .navbar__menu .announcement p {
+  display: inline;
+}
+.header-div .navbar__menu .announcement span {
+  color: #6E6E6E;
+}
+.header-div .navbar__menu .alert {
+  position: relative;
+}
+.header-div .navbar__menu .alert__menu {
+  display: none;
+  position: absolute;
+  width: 31.5rem;
+  height: 58.2rem;
+  overflow-y: scroll;
+  background-color: #fff;
+  color: #000;
+  top: 4rem;
+  left: 0;
+  z-index: 1000;
+  transform: translateX(-80%);
+  box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2392156863);
+}
+.header-div .navbar__menu .alert__menu .alert__card {
+  padding: 1.6rem;
+}
+.header-div .navbar__menu .alert__menu .alert__card .alert__message {
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+}
+.header-div .navbar__menu .alert__menu .alert__card .alert__message img {
+  width: 1.5rem;
+}
+.header-div .navbar__menu .alert__menu .alert__card .alert__date {
+  text-align: right;
+  font-size: 1.2rem;
+  color: #6E6E6E;
+}
+.header-div .navbar__menu .alert__menu .alert__card .alert__course {
+  font-size: 1.2rem;
+  color: #6E6E6E;
+  margin-bottom: 0.8rem;
+}
+.header-div .navbar__menu .alert__menu .alert__button {
+  display: flex;
+  padding: 0.9rem;
+  justify-content: center;
+}
+.header-div .navbar__menu .alert__menu .alert__button a {
+  margin: 0.6rem;
+  text-decoration: none;
+  color: #1F7A54;
+}
+.header-div .navbar__menu .alert p {
+  display: inline;
+}
+.header-div .navbar__menu .alert span {
+  color: #6E6E6E;
 }
 .header-div .navbar__menu:last-child {
   margin-right: 2.4rem;
@@ -54,8 +172,30 @@ body {
 }
 .header-div .dropdown__container .navbar--menu--items__mobile {
   font-size: 1.4rem;
-  color: #1f7a54;
-  margin: 1.5rem 1.6rem;
+  color: #1F7A54;
+  padding: 1.5rem 1.6rem;
+}
+.header-div .dropdown__container .navbar--menu--items__mobile .submenu__dropdown {
+  display: none;
+}
+.header-div .dropdown__container .navbar--menu--items__mobile .submenu {
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-div .dropdown__container .active {
+  background-color: #F3F3F3;
+  transition: all 0.2s ease-in-out;
+}
+.header-div .dropdown__container .active .submenu__dropdown {
+  transition: display 0.2s ease-in-out;
+  padding: 3rem 0 0 1.6rem;
+  display: block;
+}
+.header-div .dropdown__container .active .submenu .rotate__icon {
+  transition: all 0.2s ease-in-out;
+  transform: rotateX(180deg);
 }
 
 .position {
@@ -64,14 +204,14 @@ body {
 .position .account {
   width: 3.2rem;
   height: 3.2rem;
-  border: 0.1rem solid #8ddc97;
+  border: 0.1rem solid #8DDC97;
   border-radius: 50%;
   overflow: hidden;
 }
 .position .notification {
   position: absolute;
   color: #fff;
-  background-color: #2a7ff3;
+  background-color: #2A7FF3;
   width: 1.7rem;
   border-radius: 50%;
   text-align: center;
@@ -113,7 +253,7 @@ nav::before {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  background-color: #8ddc97;
+  background-color: #8DDC97;
   padding: 1.8rem 0;
   position: relative;
   margin-bottom: 2.6rem;
@@ -124,20 +264,17 @@ nav::before {
   position: absolute;
   bottom: 0;
 }
-.hero__container .courses,
-.hero__container .classes {
+.hero__container .courses, .hero__container .classes {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.6rem;
 }
-.hero__container .courses .number__span,
-.hero__container .classes .number__span {
+.hero__container .courses .number__span, .hero__container .classes .number__span {
   font-weight: 700;
   font-size: 2.4rem;
 }
-.hero__container .courses__icon,
-.hero__container .classes__icon {
+.hero__container .courses__icon, .hero__container .classes__icon {
   height: 3.2rem;
 }
 
@@ -247,9 +384,9 @@ hr {
 }
 .card__4 .expired__txt {
   position: absolute;
-  color: #d80000;
+  color: #D80000;
   font-size: 1.2rem;
-  background-color: #ffe4e6;
+  background-color: #FFE4E6;
   padding: 0.7rem;
   border-radius: 0.2rem;
   font-weight: 700;
@@ -259,13 +396,13 @@ hr {
 
 .bottom__div {
   width: 100%;
-  color: #1f7a54;
+  color: #1F7A54;
   display: flex;
   justify-content: center;
 }
 
 .footer_div {
-  background-color: #e0e1e1;
+  background-color: #E0E1E1;
   padding: 8px 0px 8px 0px;
   width: 100%;
   height: 40px;
@@ -301,7 +438,6 @@ hr {
   }
   .course__cards {
     grid-template-columns: 1fr;
-    /* grid-template-rows: auto; */
   }
 }
 @media (max-width: 854px) {
